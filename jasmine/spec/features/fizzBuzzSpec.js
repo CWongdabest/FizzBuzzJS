@@ -1,18 +1,21 @@
-describe("FizzBuzz", function() {
-  var fizzbuzz;
+describe('FizzBuzz', function() {
+
+  var fizzBuzz;
 
   beforeEach(function() {
-    fizzbuzz = new FizzBuzz();
+    fizzBuzz = new FizzBuzz();
   });
 
-  it("should turn multiples of 3 to fizz", function() {
-    game = fizzbuzz.transform([1, 2, 3, 4]);
-    expect(game).toEqual(1, 2, 'fizz', 4);
+    it('fizzes for 3', function() {
+      expect(fizzBuzz.transform(3)).toEqual('fizz');
+    });
 
-    //demonstrates use of custom matcher
-  });
+    it('buzzes for 5', function() {
+      expect(fizzBuzz.transform(5)).toEqual('buzz');
+    });
 
-
-
+    it('fizzbuzzes for 15', function() {
+      expect(fizzBuzz.transform(15)).toEqual('fizzbuzz');
+    });
 
 });
